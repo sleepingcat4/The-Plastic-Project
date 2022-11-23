@@ -1,0 +1,11 @@
+def unpickle(file):
+	import numpy as np
+        with open(file, 'rb') as fo:
+        	data = np.load(file)
+        x, y = data['x'], data['y']
+        return x, y
+
+The "x" of the dataset contains a two dimension numpy array of uint8, where each row contains a 32x32 coloured image. The picture follows the "channel first" rule.
+The "y" of the dataset contains a one dimension numpy array of uint8, where each value indicates the label of corresponding x item.
+
+two files, one train dataset and one test dataset
