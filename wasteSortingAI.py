@@ -12,19 +12,16 @@ from keras.models import Sequential
 from keras.utils import to_categorical, plot_model               #     
 from keras.layers import Conv2D, Dense, Flatten, MaxPooling2D    # the actual layers that will go into the cnn
 from sklearn.model_selection import train_test_split
-from imblearn.over_sampling import RandomOverSampler
-from sklearn.utils import class_weight
 
-
-
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 # dataset 1
 
 images = []
 labels = []
 img_res = [100, 100]
-categories = ['battery','biological','brown-glass', "cardboard", 'clothes', 'green-glass', 'metal', 'paper', 'plastic', 'shoes', 
-'trash', 'white-glass']
+categories = os.listdir(os.getcwd() + "/ml-data")
 weird_count = 0
 count = 0
 for i in range(len(categories)):
@@ -93,7 +90,7 @@ cnn.add(MaxPooling2D(pool_size=(2,2)))
 # flattens the layering output into a 1D array
 cnn.add(Flatten())
 cnn.add(Dense(units=128, activation='relu'))            # units = how many outputs
-cnn.add(Dense(units=len(categories), activation='softmax'))          # units is 3 because one for each number from 1-3
+cnn.add(Dense(units=len(categories), activation='softmax'))  
 
 
 # print out a summary of the neural network 
