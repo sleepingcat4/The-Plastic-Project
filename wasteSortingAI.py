@@ -4,14 +4,20 @@ import numpy as np
 from matplotlib import pyplot as plt
 import os
 import seaborn as sns
+import sklearn
 import torch
+import random
 
 # importing datasets
 import keras as k
+import tensorflow as tf
+from keras import regularizers
 from keras.models import Sequential
-from keras.utils import to_categorical, plot_model               #     
-from keras.layers import Conv2D, Dense, Flatten, MaxPooling2D    # the actual layers that will go into the cnn
+from keras.utils import to_categorical, plot_model                    
+from keras.layers import Conv2D, Dense, Flatten, MaxPooling2D, RandomFlip, RandomRotation, Dropout
 from sklearn.model_selection import train_test_split
+from imblearn.over_sampling import RandomOverSampler
+tf.config.set_soft_device_placement(True) 
 
 from PIL import ImageFile
 ImageFile.LOAD_TRUNCATED_IMAGES = True
@@ -24,6 +30,7 @@ img_res = [100, 100]
 categories = os.listdir(os.getcwd() + "/ml-data")
 weird_count = 0
 count = 0
+
 for i in range(len(categories)):
     for filename in os.listdir(os.getcwd() + '/ml-data/' + categories[i] + '/'):
         image = im.open(os.getcwd() + '/ml-data/' + categories[i] + '/' + filename)
@@ -32,7 +39,7 @@ for i in range(len(categories)):
             images.append(np_img)
             labels.append(i)
             count += 1
-print(count)
+
 # split into train and test sets 
 X_train, X_test, y_train, y_test = train_test_split(images, labels, train_size=0.75, random_state=1)
 
@@ -52,17 +59,13 @@ X_test = X_test.astype('float32') / 255
 y_train = to_categorical(y_train)
 y_test = to_categorical(y_test)
 
-"""
-
-Random oversampling
-
 
 # reshape data into 2d arrays so it can be processed
 nsamples, nx, ny, d3 = X_train.shape
 X_train = X_train.reshape((nsamples,d3*nx*ny))
 
-# Randomly oversample the minority class (garbage)
-ros = RandomOverSampler(random_state=42)
+# Randomly oversample minority classes to even out data 
+ros = RandomOverSampler()
 X_train_ros, y_train_ros= ros.fit_resample(X_train, y_train)
 
 # resize data back into original shape
@@ -72,49 +75,48 @@ X_train_ros = X_train_ros.reshape((nsamples, nx, ny, d3))
 X_train = X_train_ros
 y_train = y_train_ros
 
-"""
+# data augmentation
+with tf.device('/cpu:0'):
+    data_augmentation = k.Sequential([
+    RandomFlip("horizontal_and_vertical", input_shape=(img_res[0], img_res[1], 3)),
+    RandomRotation(0.4),
+    ])
 
 # creates the framework for the neural network
-cnn = Sequential()
-
-# adding convolutional and pooling layers
-cnn.add(Conv2D(filters = 64,            
+cnn = Sequential(
+    [
+    data_augmentation,
+    Conv2D(filters = 64,            
                 kernel_size = (3,3),    
                 activation = 'relu',    
-                input_shape=(img_res[0], img_res[1], 3)))
-# doing multiple layers in order to not lose a lot of data by pooling too large
-cnn.add(MaxPooling2D(pool_size=(2,2)))
-cnn.add(Conv2D(filters = 128, kernel_size=(3,3), activation='relu'))
-cnn.add(MaxPooling2D(pool_size=(2,2)))
+                input_shape = (img_res[0], img_res[1], 3)),
+    MaxPooling2D(pool_size=(2,2)),
+    Conv2D(filters = 128, kernel_size=(3,3), activation='relu'),
+    MaxPooling2D(pool_size=(2,2)),
+    Flatten(),
+    Dense(units=128, activation='relu'),
+    Dropout(0.5),
+    Dense(units=len(categories), activation='softmax')
+    ]
+)
 
-# flattens the layering output into a 1D array
-cnn.add(Flatten())
-cnn.add(Dense(units=128, activation='relu'))            # units = how many outputs
-cnn.add(Dense(units=len(categories), activation='softmax'))  
-
-
-# print out a summary of the neural network 
 print(cnn.summary())
-print("\n")
 
-# compiles the cnn with the chosen optimizer, loss metric, and metric to check
-# sort of puts everything else in place
-cnn.compile(optimizer='adam',                   
-            loss ='categorical_crossentropy',   
-            metrics=['accuracy', k.metrics.AUC()])               
+
+# shuffle data
+X_train, y_train = sklearn.utils.shuffle(X_train, y_train)
 
 # actually running the cnn and fitting/training neural network on the data
 # batch size = after 64 samples, make a small adjustment
 # epoch = every time all the data is run through, make a big adjustment
-
-print('labels info')
-print(y_train[0])
-
-
-history = cnn.fit(X_train, y_train, epochs=15, batch_size=8, validation_split=0.1)
+with tf.device("/gpu:0"):
+    cnn.compile(optimizer='adam',                   
+            loss ='categorical_crossentropy',   
+            metrics=['accuracy'])               
+    history = cnn.fit(X_train, y_train, epochs=6, batch_size=16, validation_split=0.1)
 
 # evalutating the loss/accuracy of the model on the test set
-loss, accuracy, auc = cnn.evaluate(X_test, y_test)
+loss, accuracy = cnn.evaluate(X_test, y_test)
 print("loss / accuracy:")
 print(loss)
 print(accuracy)
