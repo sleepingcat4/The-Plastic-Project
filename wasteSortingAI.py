@@ -13,6 +13,7 @@ from sklearn.model_selection import train_test_split
 from imblearn.over_sampling import SMOTE
 from PIL import ImageFile
 from sklearn.metrics import classification_report
+from tqdm.auto import tqdm
 
 tf.config.set_soft_device_placement(True) 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
@@ -26,8 +27,8 @@ categories = os.listdir(os.getcwd() + "/ml-data")
 weird_count = 0
 count = 0
 
-for i in range(len(categories)):
-    for filename in os.listdir(os.getcwd() + '/ml-data/' + categories[i] + '/'):
+for i in tqdm(range(len(categories))):
+    for filename in tqdm(os.listdir(os.getcwd() + '/ml-data/' + categories[i] + '/'), leave=False):
         image = im.open(os.getcwd() + '/ml-data/' + categories[i] + '/' + filename)
         np_img = np.array(image.resize((img_res[1], img_res[0])))
         if np_img.shape == (img_res[0], img_res[1], 3):
