@@ -23,7 +23,7 @@ ImageFile.LOAD_TRUNCATED_IMAGES = True
 images = []
 labels = []
 img_res = [100, 100]
-categories = os.listdir(os.getcwd() + "/ml-data")
+categories = os.listdir(os.getcwd() + "/data-v1")
 weird_count = 0
 count = 0
 
@@ -77,11 +77,8 @@ y_test = to_categorical(y_test)
 # data augmentation
 with tf.device('/cpu:0'):
     data_augmentation = k.Sequential([
-    # RandomFlip("horizontal_and_vertical", input_shape=(img_res[0], img_res[1], 3)),
     RandomRotation(0.2, input_shape=(img_res[0], img_res[1], 3)),
-    RandomFlip("horizontal_and_vertical"),
     RandomZoom(0.2, 0.2),
-    RandomContrast(factor=0.2)
     ])
 
 # creates the framework for the neural network
@@ -114,7 +111,7 @@ with tf.device("/gpu:0"):
     cnn.compile(optimizer='adam', 
                 loss=k.losses.CategoricalCrossentropy(),
                 metrics=[k.metrics.CategoricalCrossentropy(name='categorical_crossentropy'),'accuracy'])           
-    history = cnn.fit(X_train, y_train, epochs=8, batch_size=16, validation_split=0.1)
+    history = cnn.fit(X_train, y_train, epochs=12, batch_size=16, validation_split=0.1)
 
 # evalutating the loss/accuracy of the model on the test set
 loss, crossent, accuracy = cnn.evaluate(X_test, y_test)
