@@ -28,8 +28,8 @@ weird_count = 0
 count = 0
 
 for i in tqdm(range(len(categories))):
-    for filename in tqdm(os.listdir(os.getcwd() + '/ml-data/' + categories[i] + '/'), leave=False):
-        image = im.open(os.getcwd() + '/ml-data/' + categories[i] + '/' + filename)
+    for filename in tqdm(os.listdir(os.getcwd() + '/data-v1/' + categories[i] + '/'), leave=False):
+        image = im.open(os.getcwd() + '/data-v1/' + categories[i] + '/' + filename)
         np_img = np.array(image.resize((img_res[1], img_res[0])))
         if np_img.shape == (img_res[0], img_res[1], 3):
             images.append(np_img)
