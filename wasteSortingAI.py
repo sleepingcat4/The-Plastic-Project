@@ -110,6 +110,7 @@ epoch_counter = 1
 # save the data to a file that can later be converted to the CoreML format
 class SaveModelCallback(k.callbacks.Callback):
     def on_epoch_end(self, epoch, logs=None):
+        global epoch_counter
         print("Saving model...")
         self.model.save("model_epoch_" + str(epoch_counter) + ".h5")
         epoch_counter += 1
