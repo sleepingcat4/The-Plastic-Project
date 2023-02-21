@@ -112,6 +112,7 @@ class SaveModelCallback(k.callbacks.Callback):
     def on_epoch_end(self, epoch, logs=None):
         print("Saving model...")
         self.model.save("model_epoch_" + str(epoch_counter) + ".h5")
+        epoch_counter += 1
         
 
 # actually running the cnn and fitting/training neural network on the data
