@@ -138,6 +138,18 @@ print(cnn.summary())
 # shuffle data
 X_train, y_train = sklearn.utils.shuffle(X_train, y_train)
 
+
+epoch_counter = 1
+
+# save the data to a file that can later be converted to the CoreML format
+class SaveModelCallback(k.callbacks.Callback):
+    def on_epoch_end(self, epoch, logs=None):
+        global epoch_counter
+        print("Saving model...")
+        self.model.save("model_epoch_" + str(epoch_counter) + ".h5")
+        epoch_counter += 1
+        
+
 # actually running the cnn and fitting/training neural network on the data
 # batch size = after 64 samples, make a small adjustment
 # epoch = every time all the data is run through, make a big adjustment
@@ -145,7 +157,7 @@ with tf.device("/gpu:0"):
     cnn.compile(optimizer='adam', 
                 loss=k.losses.CategoricalCrossentropy(),
                 metrics=[k.metrics.CategoricalCrossentropy(name='categorical_crossentropy'),'accuracy'])           
-    history = cnn.fit(X_train, y_train, epochs=5, batch_size=16, validation_split=0.1)
+    history = cnn.fit(X_train, y_train, epochs=12, batch_size=16, validation_split=0.1, callbacks=[SaveModelCallback()])
 
 # evalutating the loss/accuracy of the model on the test set
 loss, crossent, accuracy = cnn.evaluate(X_test, y_test)
