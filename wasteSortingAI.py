@@ -14,6 +14,7 @@ from imblearn.over_sampling import SMOTE
 from PIL import ImageFile
 from sklearn.metrics import classification_report
 from tqdm.auto import tqdm
+import seaborn as sns
 
 tf.config.set_soft_device_placement(True) 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
@@ -28,8 +29,8 @@ weird_count = 0
 count = 0
 
 for i in tqdm(range(len(categories))):
-    for filename in tqdm(os.listdir(os.getcwd() + '/ml-data/' + categories[i] + '/'), leave=False):
-        image = im.open(os.getcwd() + '/ml-data/' + categories[i] + '/' + filename)
+    for filename in tqdm(os.listdir(os.getcwd() + '/data-v1/' + categories[i] + '/'), leave=False):
+        image = im.open(os.getcwd() + '/data-v1/' + categories[i] + '/' + filename)
         np_img = np.array(image.resize((img_res[1], img_res[0])))
         if np_img.shape == (img_res[0], img_res[1], 3):
             images.append(np_img)
@@ -37,7 +38,7 @@ for i in tqdm(range(len(categories))):
             count += 1
 
 # split into train and test sets 
-X_train, X_test, y_train, y_test = train_test_split(images, labels, train_size=0.75, random_state=1)
+X_train, X_test, y_train, y_test = train_test_split(images, labels, train_size=0.8, random_state=1)
 
 X_train = np.array(X_train)
 X_test = np.array(X_test)
@@ -81,14 +82,45 @@ with tf.device('/cpu:0'):
     RandomZoom(0.2, 0.2),
     ])
 
+preprocess_input = tf.keras.applications.mobilenet_v2.preprocess_input
+
+rescale = tf.keras.layers.Rescaling(1./127.5, offset=-1)
+
+base_model = tf.keras.applications.MobileNetV2(input_shape=(img_res[0], img_res[1], 3),
+                                               include_top=False,
+                                               weights='imagenet')
+
+base_model.trainable = False
+
+global_average_layer = tf.keras.layers.GlobalAveragePooling2D()
+
+prediction_layer = tf.keras.layers.Dense(len(categories))
+
+inputs = tf.keras.Input(shape=(img_res[0], img_res[1], 3))
+x = data_augmentation(inputs)
+x = preprocess_input(x)
+x = base_model(x, training=False)
+x = global_average_layer(x)
+x = tf.keras.layers.Dropout(0.2)(x)
+outputs = prediction_layer(x)
+cnn = tf.keras.Model(inputs, outputs)
+
+
+"""
+
+
 # creates the framework for the neural network
 cnn = Sequential(
     [
     data_augmentation,
-    Conv2D(filters = 64,            
+    Conv2D(filters = 16,            
                 kernel_size = (3,3),    
                 activation = 'relu',    
                 input_shape = (img_res[0], img_res[1], 3)),
+    MaxPooling2D(pool_size=(2,2)),
+    Conv2D(filters = 32, kernel_size=(3,3), activation='relu'),
+    MaxPooling2D(pool_size=(2,2)),
+    Conv2D(filters = 64, kernel_size=(3,3), activation='relu'),
     MaxPooling2D(pool_size=(2,2)),
     Conv2D(filters = 128, kernel_size=(3,3), activation='relu'),
     MaxPooling2D(pool_size=(2,2)),
@@ -97,6 +129,8 @@ cnn = Sequential(
     Dense(units=len(categories), activation='softmax')
     ]
 )
+
+"""
 
 print(cnn.summary())
 
@@ -111,7 +145,7 @@ with tf.device("/gpu:0"):
     cnn.compile(optimizer='adam', 
                 loss=k.losses.CategoricalCrossentropy(),
                 metrics=[k.metrics.CategoricalCrossentropy(name='categorical_crossentropy'),'accuracy'])           
-    history = cnn.fit(X_train, y_train, epochs=12, batch_size=16, validation_split=0.1)
+    history = cnn.fit(X_train, y_train, epochs=5, batch_size=16, validation_split=0.1)
 
 # evalutating the loss/accuracy of the model on the test set
 loss, crossent, accuracy = cnn.evaluate(X_test, y_test)
@@ -119,6 +153,11 @@ print("loss / crossentropy / accuracy:")
 print(loss)
 print(crossent)
 print(accuracy)
+
+"""
+IF MODEL DOESNT KNOW, RETURN GARBAGE AND SAY WE'RE NOT QUITE SURE
+Resource: https://www.ridwell.com/
+"""
 
 acc = history.history['accuracy'] # get history report of the model
 
@@ -134,14 +173,18 @@ y_pred = (y_pred > 0.5)
 print(classification_report(y_test, y_pred, target_names=categories, digits=4))
 
 
-# plt.figure(figsize=(8, 8)) # set figure size for the plot generated
 
-
-# plt.plot(acc, label='Training Accuracy') #plot accuracy curve for each train run
-# plt.plot(val_acc, label='Validation Accuracy') #plot accuracy curve for each validation run
-
-# plt.legend(loc='lower right')
-# plt.ylabel('Accuracy') #label name for y axis
-# plt.ylim([min(plt.ylim()), 1]) #set limit for y axis
-# plt.title('Training and Validation Accuracy') #set title for the plot
-# plt.show()
+# visualize 24 random results
+sns.set(font_scale=1)
+index = np.random.choice(np.arange(len(X_test)), 12, replace=False)    # pick 24 random smamples
+figure, axes = plt.subplots(nrows=3, ncols=4, figsize=(16,9))           # set dimensions
+for item in zip(axes.ravel(), X_test[index], y_test[index], y_pred[index]):          # put each sample into a "slot" in the table
+    axes, image, target, predict = item
+    axes.imshow(image, cmap=plt.cm.gray_r)
+    axes.set_xticks([])
+    axes.set_yticks([])
+    print(target)
+    axes.set_title("label: " + categories[np.argmax(target)] + '''
+    predicted: ''' + categories[np.argmax(predict)])
+plt.tight_layout()
+plt.show()        
