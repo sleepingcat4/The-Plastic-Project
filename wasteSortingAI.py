@@ -15,6 +15,8 @@ from PIL import ImageFile
 from sklearn.metrics import classification_report
 from tqdm.auto import tqdm
 import seaborn as sns
+from pathlib import Path
+from time import time
 
 tf.config.set_soft_device_placement(True) 
 ImageFile.LOAD_TRUNCATED_IMAGES = True
@@ -140,13 +142,15 @@ X_train, y_train = sklearn.utils.shuffle(X_train, y_train)
 
 
 epoch_counter = 1
+model_path = f"models/{str(round(time()))}"
+Path(model_path).mkdir(parents=True, exist_ok=True)
 
 # save the data to a file that can later be converted to the CoreML format
 class SaveModelCallback(k.callbacks.Callback):
     def on_epoch_end(self, epoch, logs=None):
         global epoch_counter
         print("Saving model...")
-        self.model.save("model_epoch_" + str(epoch_counter) + ".h5")
+        self.model.save(f"{model_path}/model_epoch_" + str(epoch_counter) + ".h5")
         epoch_counter += 1
         
 
