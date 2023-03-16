@@ -1,0 +1,17 @@
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\bin\Debug\netstandard2.0\TestFormsApp.deps.json
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\bin\Debug\netstandard2.0\TestFormsApp.dll
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\bin\Debug\netstandard2.0\TestFormsApp.pdb
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\TestFormsApp.csproj.AssemblyReference.cache
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\TestFormsApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\TestFormsApp.AssemblyInfoInputs.cache
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\TestFormsApp.AssemblyInfo.cs
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\TestFormsApp.csproj.CoreCompileInputs.cache
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\TestFormsApp.dll
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\refint\TestFormsApp.dll
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\TestFormsApp.pdb
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\ref\TestFormsApp.dll
+C:\Users\odettweiler\OneDrive - Eastside Preparatory School\Documents\VS Projects\TestFormsApp\TestFormsApp\TestFormsApp\obj\Debug\netstandard2.0\Views\NotesPage.xaml.g.cs

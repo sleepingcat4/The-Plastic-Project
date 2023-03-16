@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "DIXBeJOcIdUkl3jvQUB3OeqX1OCrYkpkcjL35pvIfELPUYKj1JCBvYRLTWoN3pQE20eOBKAwpYOBLlYvbI6Prg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.iOS\\TestFormsApp.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\odettweiler\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\odettweiler\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\odettweiler\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
