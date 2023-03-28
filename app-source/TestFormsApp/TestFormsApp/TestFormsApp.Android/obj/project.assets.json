@@ -3414,11 +3414,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.Android\\TestFormsApp.Android.csproj",
+      "projectUniqueName": "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.Android\\TestFormsApp.Android.csproj",
       "projectName": "TestFormsApp.Android",
-      "projectPath": "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.Android\\TestFormsApp.Android.csproj",
+      "projectPath": "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.Android\\TestFormsApp.Android.csproj",
       "packagesPath": "C:\\Users\\odettweiler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.Android\\obj\\",
+      "outputPath": "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3439,8 +3439,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp\\TestFormsApp.csproj": {
-              "projectPath": "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp\\TestFormsApp.csproj"
+            "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp\\TestFormsApp.csproj": {
+              "projectPath": "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp\\TestFormsApp.csproj"
             }
           }
         }
@@ -3452,6 +3452,14 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.0, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.7.0, )"
+          },
+          "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[5.0.0.2196, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

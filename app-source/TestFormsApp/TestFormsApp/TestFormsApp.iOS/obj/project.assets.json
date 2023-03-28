@@ -1068,11 +1068,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.iOS\\TestFormsApp.iOS.csproj",
+      "projectUniqueName": "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.iOS\\TestFormsApp.iOS.csproj",
       "projectName": "TestFormsApp.iOS",
-      "projectPath": "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.iOS\\TestFormsApp.iOS.csproj",
+      "projectPath": "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.iOS\\TestFormsApp.iOS.csproj",
       "packagesPath": "C:\\Users\\odettweiler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.iOS\\obj\\",
+      "outputPath": "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1093,8 +1093,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp\\TestFormsApp.csproj": {
-              "projectPath": "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp\\TestFormsApp.csproj"
+            "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp\\TestFormsApp.csproj": {
+              "projectPath": "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp\\TestFormsApp.csproj"
             }
           }
         }

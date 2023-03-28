@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T93yENoxV+CoX9TueBItjMy85CQwcaFWXfnnelROvVU4XVRBvuyD1Bc+fOSrVGGQeRDgVE7RmxTLhExtuy7yRw==",
+  "dgSpecHash": "hRDFEd6x+01pLhw/+uiFi+s2zjXZf2d3UK5hinvWiwtgLrdz2IaDhH5+pl20GT2/eJYtIOLZd2/czjOs2T8Bgw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\odettweiler\\OneDrive - Eastside Preparatory School\\Documents\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp\\TestFormsApp.csproj",
+  "projectFilePath": "C:\\VS Projects\\TestFormsApp\\TestFormsApp\\TestFormsApp\\TestFormsApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\odettweiler\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\odettweiler\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
