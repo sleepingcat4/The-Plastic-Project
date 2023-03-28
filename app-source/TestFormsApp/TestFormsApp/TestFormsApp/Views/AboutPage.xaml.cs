@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -14,7 +15,22 @@ namespace TestFormsApp.Views
         async void OnButtonClicked(object sender, EventArgs e)
         {
             // Launch the specified URL in the system browser.
-            await Launcher.OpenAsync("https://aka.ms/xamarin-quickstart");
+
+            // get the platform and show it here
+            if(Device.RuntimePlatform == Device.iOS)
+            {
+                // iOS
+                platformButton.Text = "You are on iOS";
+                await Navigation.PushAsync(new AboutPage());
+            }
+            else if (Device.RuntimePlatform == Device.Android)
+            {
+                // android
+                platformButton.Text = "You are on Android.";
+                await Navigation.PushAsync(new AboutPage());
+
+                
+            }
         }
     }
 }
