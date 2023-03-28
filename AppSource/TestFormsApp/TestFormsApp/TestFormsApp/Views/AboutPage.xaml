@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestFormsApp.Views.AboutPage"
+             Title="About">
+    <!-- Layout children in two rows -->
+    <Grid RowDefinitions="100,Auto,100,*">
+        <Image Source="temp_logo.png" />
+        <StackLayout Grid.Row="1"
+                     Margin="20"
+                     Spacing="20">
+            <Label FontSize="22">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="The Plastic Project"
+                                  FontAttributes="Bold"
+                                  FontSize="22" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="A youth-led project using technology to innovate climate solutions." 
+                   FontSize="18" />
+            <Button Text="Visit us!"
+                    Clicked="PlasticButtonClicked" />
+        </StackLayout>
+        <Image Grid.Row="2"
+               Source="xamarin_logo.png"
+               BackgroundColor="{OnPlatform iOS=LightSlateGray, Android=#123456}" 
+               VerticalOptions="End"
+               WidthRequest="250" />
+        <!-- Layout children vertically -->
+        <StackLayout Grid.Row="3"
+                     Margin="20"
+                     Spacing="20">
+            <Label FontSize="22">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Plastic App"
+                                  FontAttributes="Bold"
+                                  FontSize="22" />
+                            <Span Text=" v1.0" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label Text="This app is written in XAML and C# with the Xamarin Platform." />
+            <Button Text="Learn more"
+                    Clicked="XamarinButtonClicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>
