@@ -12,7 +12,7 @@ namespace TestFormsApp.Views
             InitializeComponent();
         }
 
-        async void OnButtonClicked(object sender, EventArgs e)
+        async void XamarinButtonClicked(object sender, EventArgs e)
         {
             // Launch the specified URL in the system browser.
 
@@ -31,6 +31,11 @@ namespace TestFormsApp.Views
 
                 
             }
+        }
+
+        async void PlasticButtonClicked(object sender, EventArgs e)
+        {
+            await Launcher.OpenAsync("https://www.theplasticproject.org/");
         }
     }
 }
