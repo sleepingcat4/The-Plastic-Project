@@ -1,0 +1,233 @@
+2023-03-14 00:47:22,990 INFO    StreamThr :14576 [internal.py:wandb_internal():87] W&B internal server running at pid: 14576, started at: 2023-03-14 00:47:22.989819
+2023-03-14 00:47:22,991 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status
+2023-03-14 00:47:22,993 INFO    WriterThread:14576 [datastore.py:open_for_write():85] open: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\run-w6pajwjz.wandb
+2023-03-14 00:47:22,995 DEBUG   SenderThread:14576 [sender.py:send():336] send: header
+2023-03-14 00:47:23,214 DEBUG   SenderThread:14576 [sender.py:send():336] send: run
+2023-03-14 00:47:23,222 INFO    SenderThread:14576 [sender.py:_maybe_setup_resume():723] checking resume status for None/train/w6pajwjz
+2023-03-14 00:47:23,576 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: check_version
+2023-03-14 00:47:23,578 INFO    SenderThread:14576 [dir_watcher.py:__init__():216] watching files in: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files
+2023-03-14 00:47:23,578 INFO    SenderThread:14576 [sender.py:_start_run_threads():1067] run started: w6pajwjz with start time 1678780042.990819
+2023-03-14 00:47:23,578 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: summary_record
+2023-03-14 00:47:23,579 INFO    SenderThread:14576 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-14 00:47:23,579 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: check_version
+2023-03-14 00:47:23,633 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: run_start
+2023-03-14 00:47:23,661 DEBUG   HandlerThread:14576 [system_info.py:__init__():31] System info init
+2023-03-14 00:47:23,661 DEBUG   HandlerThread:14576 [system_info.py:__init__():46] System info init done
+2023-03-14 00:47:23,661 INFO    HandlerThread:14576 [system_monitor.py:start():151] Starting system monitor
+2023-03-14 00:47:23,661 INFO    SystemMonitor:14576 [system_monitor.py:_start():116] Starting system asset monitoring threads
+2023-03-14 00:47:23,661 INFO    HandlerThread:14576 [system_monitor.py:probe():172] Collecting system info
+2023-03-14 00:47:23,667 INFO    SystemMonitor:14576 [interfaces.py:start():168] Started cpu
+2023-03-14 00:47:23,667 INFO    SystemMonitor:14576 [interfaces.py:start():168] Started disk
+2023-03-14 00:47:23,668 INFO    SystemMonitor:14576 [interfaces.py:start():168] Started gpu
+2023-03-14 00:47:23,668 INFO    SystemMonitor:14576 [interfaces.py:start():168] Started memory
+2023-03-14 00:47:23,676 INFO    SystemMonitor:14576 [interfaces.py:start():168] Started network
+2023-03-14 00:47:23,691 DEBUG   HandlerThread:14576 [system_info.py:probe():195] Probing system
+2023-03-14 00:47:23,692 DEBUG   HandlerThread:14576 [system_info.py:_probe_git():180] Probing git
+2023-03-14 00:47:23,764 DEBUG   HandlerThread:14576 [system_info.py:_probe_git():188] Probing git done
+2023-03-14 00:47:23,764 DEBUG   HandlerThread:14576 [system_info.py:probe():241] Probing system done
+2023-03-14 00:47:23,764 DEBUG   HandlerThread:14576 [system_monitor.py:probe():181] {'os': 'Windows-10-10.0.19041-SP0', 'python': '3.8.6', 'heartbeatAt': '2023-03-14T07:47:23.691780', 'startedAt': '2023-03-14T07:47:22.980817', 'docker': None, 'cuda': None, 'args': ('--img', '1056', '--batch', '12', '--epochs', '5000', '--data', 'synthetic-data-v1\\data.yaml', '--weights', 'yolov5s.pt'), 'state': 'running', 'program': 'yolov5\\train.py', 'codePath': 'yolov5\\train.py', 'git': {'remote': 'https://github.com/tylerz157/The-Plastic-Project.git', 'commit': '88367c33d394cb92bc05878de383f74543f9f2cd'}, 'email': 'tzhang@eastsideprep.org', 'root': 'C:/Users/horizon/OneDrive/Documents/important/projects/thePlasticProject/The-Plastic-Project', 'host': 'tylerDesktop', 'username': 'horizon', 'executable': 'C:\\Users\\horizon\\AppData\\Local\\Programs\\Python\\Python38\\python.exe', 'cpu_count': 8, 'cpu_count_logical': 16, 'cpu_freq': {'current': 3593.0, 'min': 0.0, 'max': 3593.0}, 'cpu_freq_per_core': [{'current': 3593.0, 'min': 0.0, 'max': 3593.0}], 'disk': {'total': 930.9095230102539, 'used': 676.0710144042969}, 'gpu': 'NVIDIA GeForce GTX 1080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce GTX 1080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 31.911434173583984}}
+2023-03-14 00:47:23,764 INFO    HandlerThread:14576 [system_monitor.py:probe():182] Finished collecting system info
+2023-03-14 00:47:23,764 INFO    HandlerThread:14576 [system_monitor.py:probe():185] Publishing system info
+2023-03-14 00:47:23,764 DEBUG   HandlerThread:14576 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-03-14 00:47:23,765 DEBUG   HandlerThread:14576 [system_info.py:_save_pip():67] Saving pip packages done
+2023-03-14 00:47:23,766 INFO    HandlerThread:14576 [system_monitor.py:probe():187] Finished publishing system info
+2023-03-14 00:47:23,775 DEBUG   SenderThread:14576 [sender.py:send():336] send: files
+2023-03-14 00:47:23,775 INFO    SenderThread:14576 [sender.py:_save_file():1321] saving file wandb-metadata.json with policy now
+2023-03-14 00:47:23,783 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: stop_status
+2023-03-14 00:47:23,783 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: stop_status
+2023-03-14 00:47:23,873 DEBUG   SenderThread:14576 [sender.py:send():336] send: telemetry
+2023-03-14 00:47:23,873 DEBUG   SenderThread:14576 [sender.py:send():336] send: config
+2023-03-14 00:47:24,251 INFO    wandb-upload_0:14576 [upload_job.py:push():138] Uploaded file C:\Users\horizon\AppData\Local\Temp\tmpw1v1io87wandb\atkaymbz-wandb-metadata.json
+2023-03-14 00:47:24,586 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\wandb-metadata.json
+2023-03-14 00:47:24,586 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\requirements.txt
+2023-03-14 00:47:24,586 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:47:24,586 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_created():275] file/dir created: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\wandb-summary.json
+2023-03-14 00:47:26,597 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:47:28,316 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:47:30,624 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:47:33,599 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:47:38,790 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:47:38,790 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:47:38,893 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:47:40,695 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:47:43,822 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:47:43,931 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:47:48,854 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:47:48,963 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:47:53,887 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:47:53,998 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:47:54,786 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\config.yaml
+2023-03-14 00:47:58,919 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:47:59,167 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:03,952 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:04,200 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:06,862 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:48:08,985 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:10,132 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:14,030 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:15,138 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:16,935 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:48:19,056 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:20,171 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:23,685 DEBUG   SystemMonitor:14576 [system_monitor.py:_start():130] Starting system metrics aggregation loop
+2023-03-14 00:48:23,686 DEBUG   SenderThread:14576 [sender.py:send():336] send: stats
+2023-03-14 00:48:24,094 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:25,699 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:29,122 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:30,732 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:34,161 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:35,764 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:39,187 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:40,798 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:44,227 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:45,831 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:49,253 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:50,864 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:53,700 DEBUG   SenderThread:14576 [sender.py:send():336] send: stats
+2023-03-14 00:48:54,296 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:48:56,719 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:48:59,323 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:49:01,753 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:49:04,373 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:49:06,789 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:49:09,391 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:49:11,823 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:49:14,452 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:49:15,324 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:49:16,832 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:49:17,340 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:49:19,352 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:49:19,522 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: keepalive
+2023-03-14 00:49:19,738 DEBUG   SenderThread:14576 [sender.py:send():336] send: exit
+2023-03-14 00:49:19,738 INFO    SenderThread:14576 [sender.py:send_exit():559] handling exit code: 1
+2023-03-14 00:49:19,738 INFO    SenderThread:14576 [sender.py:send_exit():561] handling runtime: 116
+2023-03-14 00:49:19,738 INFO    SenderThread:14576 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-14 00:49:19,739 INFO    SenderThread:14576 [sender.py:send_exit():567] send defer
+2023-03-14 00:49:19,739 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:19,739 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 0
+2023-03-14 00:49:19,739 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:19,739 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 0
+2023-03-14 00:49:19,739 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 1
+2023-03-14 00:49:19,740 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:19,740 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 1
+2023-03-14 00:49:19,740 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:19,740 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 1
+2023-03-14 00:49:19,740 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 2
+2023-03-14 00:49:19,740 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:19,740 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 2
+2023-03-14 00:49:19,740 INFO    HandlerThread:14576 [system_monitor.py:finish():161] Stopping system monitor
+2023-03-14 00:49:19,741 DEBUG   SystemMonitor:14576 [system_monitor.py:_start():137] Finished system metrics aggregation loop
+2023-03-14 00:49:19,741 DEBUG   SystemMonitor:14576 [system_monitor.py:_start():141] Publishing last batch of metrics
+2023-03-14 00:49:19,750 INFO    HandlerThread:14576 [interfaces.py:finish():175] Joined cpu
+2023-03-14 00:49:19,750 INFO    HandlerThread:14576 [interfaces.py:finish():175] Joined disk
+2023-03-14 00:49:19,805 INFO    HandlerThread:14576 [interfaces.py:finish():175] Joined gpu
+2023-03-14 00:49:19,805 INFO    HandlerThread:14576 [interfaces.py:finish():175] Joined memory
+2023-03-14 00:49:19,805 INFO    HandlerThread:14576 [interfaces.py:finish():175] Joined network
+2023-03-14 00:49:19,806 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:19,806 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 2
+2023-03-14 00:49:19,806 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 3
+2023-03-14 00:49:19,806 DEBUG   SenderThread:14576 [sender.py:send():336] send: stats
+2023-03-14 00:49:19,806 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:19,806 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 3
+2023-03-14 00:49:19,806 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:19,806 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 3
+2023-03-14 00:49:19,806 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 4
+2023-03-14 00:49:19,807 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:19,807 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 4
+2023-03-14 00:49:19,807 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:19,807 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 4
+2023-03-14 00:49:19,807 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 5
+2023-03-14 00:49:19,807 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:19,807 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 5
+2023-03-14 00:49:19,807 DEBUG   SenderThread:14576 [sender.py:send():336] send: summary
+2023-03-14 00:49:19,808 INFO    SenderThread:14576 [sender.py:_save_file():1321] saving file wandb-summary.json with policy end
+2023-03-14 00:49:19,808 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:19,808 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 5
+2023-03-14 00:49:19,808 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 6
+2023-03-14 00:49:19,808 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:19,808 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 6
+2023-03-14 00:49:19,808 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:19,808 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 6
+2023-03-14 00:49:19,809 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 7
+2023-03-14 00:49:19,809 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: status_report
+2023-03-14 00:49:19,809 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:19,809 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 7
+2023-03-14 00:49:19,809 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:19,809 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 7
+2023-03-14 00:49:20,354 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\wandb-summary.json
+2023-03-14 00:49:20,651 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 8
+2023-03-14 00:49:20,652 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:20,652 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 8
+2023-03-14 00:49:20,652 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:20,652 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 8
+2023-03-14 00:49:20,800 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-14 00:49:20,881 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 9
+2023-03-14 00:49:20,881 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: poll_exit
+2023-03-14 00:49:20,882 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:20,882 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 9
+2023-03-14 00:49:20,951 DEBUG   SenderThread:14576 [sender.py:send():336] send: artifact
+2023-03-14 00:49:21,359 INFO    Thread-17 :14576 [dir_watcher.py:_on_file_modified():292] file/dir modified: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:49:21,571 INFO    SenderThread:14576 [sender.py:send_artifact():1417] sent artifact job-https___github.com_tylerz157_The-Plastic-Project.git_yolov5_train.py - {'id': 'QXJ0aWZhY3Q6Mzk2Njc4Nzky', 'digest': '8c40c2797ddf4b378b019cd3041522da', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_tylerz157_The-Plastic-Project.git_yolov5_train.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_tylerz157_The-Plastic-Project.git_yolov5_train.py', 'alias': 'v0'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjU2OTgxMTA5', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6Mzk2Njc4Nzky', 'versionIndex': 0}}, 'version': 'v0'}
+2023-03-14 00:49:21,571 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:21,571 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 9
+2023-03-14 00:49:21,571 INFO    SenderThread:14576 [dir_watcher.py:finish():362] shutting down directory watcher
+2023-03-14 00:49:21,807 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-14 00:49:22,363 INFO    SenderThread:14576 [dir_watcher.py:finish():392] scan: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files
+2023-03-14 00:49:22,364 INFO    SenderThread:14576 [dir_watcher.py:finish():406] scan save: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\config.yaml config.yaml
+2023-03-14 00:49:22,364 INFO    SenderThread:14576 [dir_watcher.py:finish():406] scan save: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log output.log
+2023-03-14 00:49:22,366 INFO    SenderThread:14576 [dir_watcher.py:finish():406] scan save: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\requirements.txt requirements.txt
+2023-03-14 00:49:22,366 INFO    SenderThread:14576 [dir_watcher.py:finish():406] scan save: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\wandb-metadata.json wandb-metadata.json
+2023-03-14 00:49:22,368 INFO    SenderThread:14576 [dir_watcher.py:finish():406] scan save: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\wandb-summary.json wandb-summary.json
+2023-03-14 00:49:22,370 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 10
+2023-03-14 00:49:22,371 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: poll_exit
+2023-03-14 00:49:22,371 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:22,371 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 10
+2023-03-14 00:49:22,373 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:22,373 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 10
+2023-03-14 00:49:22,373 INFO    SenderThread:14576 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-14 00:49:22,799 INFO    wandb-upload_0:14576 [upload_job.py:push():138] Uploaded file C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\config.yaml
+2023-03-14 00:49:22,806 INFO    wandb-upload_3:14576 [upload_job.py:push():138] Uploaded file C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\wandb-summary.json
+2023-03-14 00:49:22,811 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-14 00:49:22,812 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: poll_exit
+2023-03-14 00:49:22,846 INFO    wandb-upload_2:14576 [upload_job.py:push():138] Uploaded file C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\requirements.txt
+2023-03-14 00:49:22,894 INFO    wandb-upload_1:14576 [upload_job.py:push():138] Uploaded file C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\files\output.log
+2023-03-14 00:49:23,105 INFO    Thread-16 :14576 [sender.py:transition_state():587] send defer: 11
+2023-03-14 00:49:23,105 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:23,106 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 11
+2023-03-14 00:49:23,106 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:23,106 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 11
+2023-03-14 00:49:23,106 INFO    SenderThread:14576 [file_pusher.py:join():167] waiting for file pusher
+2023-03-14 00:49:23,106 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 12
+2023-03-14 00:49:23,106 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:23,106 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 12
+2023-03-14 00:49:23,106 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:23,106 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 12
+2023-03-14 00:49:23,394 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 13
+2023-03-14 00:49:23,394 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:23,394 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 13
+2023-03-14 00:49:23,395 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:23,395 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 13
+2023-03-14 00:49:23,395 INFO    SenderThread:14576 [sender.py:transition_state():587] send defer: 14
+2023-03-14 00:49:23,395 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: defer
+2023-03-14 00:49:23,395 DEBUG   SenderThread:14576 [sender.py:send():336] send: final
+2023-03-14 00:49:23,395 INFO    HandlerThread:14576 [handler.py:handle_request_defer():170] handle defer: 14
+2023-03-14 00:49:23,395 DEBUG   SenderThread:14576 [sender.py:send():336] send: footer
+2023-03-14 00:49:23,395 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: defer
+2023-03-14 00:49:23,395 INFO    SenderThread:14576 [sender.py:send_request_defer():583] handle sender defer: 14
+2023-03-14 00:49:23,396 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-14 00:49:23,396 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: poll_exit
+2023-03-14 00:49:23,396 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: poll_exit
+2023-03-14 00:49:23,396 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: server_info
+2023-03-14 00:49:23,397 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: get_summary
+2023-03-14 00:49:23,397 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: poll_exit
+2023-03-14 00:49:23,397 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: sampled_history
+2023-03-14 00:49:23,397 DEBUG   SenderThread:14576 [sender.py:send_request():363] send_request: server_info
+2023-03-14 00:49:23,485 INFO    MainThread:14576 [wandb_run.py:_footer_history_summary_info():3442] rendering history
+2023-03-14 00:49:23,485 INFO    MainThread:14576 [wandb_run.py:_footer_history_summary_info():3474] rendering summary
+2023-03-14 00:49:23,485 INFO    MainThread:14576 [wandb_run.py:_footer_sync_info():3398] logging synced files
+2023-03-14 00:49:23,486 DEBUG   HandlerThread:14576 [handler.py:handle_request():144] handle_request: shutdown
+2023-03-14 00:49:23,486 INFO    HandlerThread:14576 [handler.py:finish():841] shutting down handler
+2023-03-14 00:49:24,405 INFO    WriterThread:14576 [datastore.py:close():299] close: C:\Users\horizon\OneDrive\Documents\important\projects\thePlasticProject\The-Plastic-Project\wandb\run-20230314_004722-w6pajwjz\run-w6pajwjz.wandb
+2023-03-14 00:49:24,498 INFO    SenderThread:14576 [sender.py:finish():1493] shutting down sender
+2023-03-14 00:49:24,498 INFO    SenderThread:14576 [file_pusher.py:finish():162] shutting down file pusher
+2023-03-14 00:49:24,498 INFO    SenderThread:14576 [file_pusher.py:join():167] waiting for file pusher

@@ -1,0 +1,61 @@
+{
+    "os": "Windows-10-10.0.19041-SP0",
+    "python": "3.8.6",
+    "heartbeatAt": "2023-03-14T07:50:07.550591",
+    "startedAt": "2023-03-14T07:50:05.821836",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--img",
+        "1056",
+        "--batch",
+        "5",
+        "--epochs",
+        "5000",
+        "--data",
+        "synthetic-data-v1\\data.yaml",
+        "--weights",
+        "yolov5s.pt"
+    ],
+    "state": "running",
+    "program": "yolov5\\train.py",
+    "codePath": "yolov5\\train.py",
+    "git": {
+        "remote": "https://github.com/tylerz157/The-Plastic-Project.git",
+        "commit": "88367c33d394cb92bc05878de383f74543f9f2cd"
+    },
+    "email": "tzhang@eastsideprep.org",
+    "root": "C:/Users/horizon/OneDrive/Documents/important/projects/thePlasticProject/The-Plastic-Project",
+    "host": "tylerDesktop",
+    "username": "horizon",
+    "executable": "C:\\Users\\horizon\\AppData\\Local\\Programs\\Python\\Python38\\python.exe",
+    "cpu_count": 8,
+    "cpu_count_logical": 16,
+    "cpu_freq": {
+        "current": 3593.0,
+        "min": 0.0,
+        "max": 3593.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3593.0,
+            "min": 0.0,
+            "max": 3593.0
+        }
+    ],
+    "disk": {
+        "total": 930.9095230102539,
+        "used": 677.3921928405762
+    },
+    "gpu": "NVIDIA GeForce GTX 1080 Ti",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce GTX 1080 Ti",
+            "memory_total": 11811160064
+        }
+    ],
+    "memory": {
+        "total": 31.911434173583984
+    }
+}
