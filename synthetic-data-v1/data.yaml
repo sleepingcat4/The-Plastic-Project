@@ -1,0 +1,5 @@
+train: ../synthetic-data-v1/train/images
+val: ../synthetic-data-v1/valid/images
+
+nc: 13
+names: ['battery', 'biological', 'clothes', 'glass', 'metal-cans', 'paper', 'paper-bag', 'penholder', 'plastic-bag', 'plastic-bottles', 'shoes', 'trash', 'trashbox-cardboard']
